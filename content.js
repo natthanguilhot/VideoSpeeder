@@ -10,6 +10,6 @@ async function start() {
 				}
 			});
 		}
-	}, 500);
+	}, 2000);
 }
 start();

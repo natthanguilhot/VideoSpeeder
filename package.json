@@ -1,0 +1,14 @@
+{
+	"name": "videospeeder",
+	"version": "1.0.0",
+	"description": "",
+	"main": "content.js",
+	"scripts": {
+		"tailwind": "npx tailwindcss -i ./tailwind.css -o ./popup/options.css --watch"
+	},
+	"author": "Natthan Guilhot",
+	"license": "ISC",
+	"devDependencies": {
+		"tailwindcss": "^3.4.3"
+	}
+}

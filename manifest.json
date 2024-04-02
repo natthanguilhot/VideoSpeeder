@@ -1,15 +1,15 @@
 {
 	"manifest_version": 3,
-	"name": "Video Speed Adjuster",
+	"name": "Video Speed",
 	"version": "1.0",
-	"description": "Automatically adjusts video playback speed on specified websites.",
+	"description": "Automatically adjusts video playback speed on any websites.",
 	"permissions": ["activeTab", "storage", "scripting"],
 	"action": {
 		"default_popup": "popup/options.html"
 	},
 	"content_scripts": [
 		{
-			"matches": ["*://*.youtube.com/*", "*://*.disneyplus.com/*", "*://*.netflix.com/*"],
+			"matches": ["<all_urls>"],
 			"js": ["content.js"]
 		}
 	]

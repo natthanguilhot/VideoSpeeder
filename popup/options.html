@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Options de Video Speed Adjuster</title>
+		<title>Options de Video Speed</title>
 		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="options.css" />
 	</head>
-	<body style="width: 400px">
-		<h1>Options de Video Speed Adjuster</h1>
-		<div>
-			<label for="active">Activer l'ajustement de vitesse :</label>
-			<input type="checkbox" id="activespeedvideo" name="active" />
-		</div>
-		<div>
-			<label for="speed">Vitesse de lecture :</label>
-			<input type="number" id="speedspeedvideo" name="speed" min="0.1" max="10" step="0.1" value="1" />
-		</div>
-		<button id="savespeedvideo">Sauvegarder</button>
-		<p>Après avoir sauvegardé, rafraichir la page.</p>
+	<body class="w-[400px] p-4">
+		<h1 class="text-2xl mb-4">Options de Video Speed</h1>
+		<section class="flex flex-col gap-y-2">
+			<div class="text-lg">
+				<label for="activespeedvideo">Activer l'ajustement de vitesse :</label>
+				<input type="checkbox" id="activespeedvideo" name="activespeedvideo" />
+			</div>
+			<div class="text-lg">
+				<label for="speedspeedvideo">Vitesse de lecture :</label>
+				<input type="number" id="speedspeedvideo" name="speedspeedvideo" min="0.1" max="16" step="0.1" value="1" class="px-2 py-1 border rounded text-base" />
+			</div>
+			<button id="saveAndRefreshSpeedVideo" class="p-2 rounded border border-blue-100 w-fit hover:bg-gray-100 active:bg-gray-400 transition-all">Sauvegarder et rafraichir</button>
+			<p>Après avoir sauvegardé, rafraichir la page.</p>
+			<div class="flex gap-x-2">
+				<button id="saveSpeedVideo" class="p-2 rounded border border-blue-100 w-fit hover:bg-gray-100 active:bg-gray-400 transition-all">Sauvegarder</button>
+				<button id="refreshPage" class="p-2 rounded border border-blue-100 w-fit hover:bg-gray-100 active:bg-gray-400 transition-all">Rafraichir</button>
+			</div>
+		</section>
 		<script src="options.js"></script>
 	</body>
 </html>

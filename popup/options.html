@@ -5,23 +5,36 @@
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="options.css" />
 	</head>
-	<body class="w-[400px] p-4">
+	<body class="w-[400px] p-4 text-white bg-gradient-to-b from-[#353535] to-[#3C6E71]">
 		<h1 class="text-2xl mb-4">Options de Video Speed</h1>
 		<section class="flex flex-col gap-y-2">
 			<div class="text-lg">
 				<label for="activespeedvideo">Activer l'ajustement de vitesse :</label>
-				<input type="checkbox" id="activespeedvideo" name="activespeedvideo" />
+				<div class="relative h-4 w-16 mt-2">
+					<label id="toggleSpeedVideo" for="activespeedvideo" class="cursor-pointer h-4 w-16 rounded-full block bg-white after:rounded-full after:text-sm after:content-['❌'] after:absolute after:w-6 after:h-6 after:bg-[#3C6E71] after:border after:border-white after:top-1/2 after:transform after:-translate-y-1/2 after:left-0 after:transition-all after:flex after:items-center after:justify-center"></label>
+					<input type="checkbox" id="activespeedvideo" name="activespeedvideo" class="opacity-0" />
+					<!-- class="px-2 py-1 border rounded text-base text-black focus:ring-2 focus:ring-[#FFFFFF] outline-offset-2 outline-none"  -->
+				</div>
 			</div>
+
 			<div class="text-lg">
 				<label for="speedspeedvideo">Vitesse de lecture :</label>
-				<input type="number" id="speedspeedvideo" name="speedspeedvideo" min="0.1" max="16" step="0.1" value="1" class="px-2 py-1 border rounded text-base" />
+				<div>
+					<button id="minusSpeedVideo" class="bg-white px-2 py-1 border rounded text-base text-black focus:ring-2 focus:ring-[#FFFFFF] outline-offset-2 outline-none">-</button>
+					<input type="number" id="speedspeedvideo" name="speedspeedvideo" min="0.1" max="16" step="0.1" value="1" class="px-2 py-1 border rounded text-base text-black focus:ring-2 focus:ring-[#FFFFFF] outline-offset-2 outline-none" />
+					<button id="plusSpeedVideo" class="bg-white px-2 py-1 border rounded text-base text-black focus:ring-2 focus:ring-[#FFFFFF] outline-offset-2 outline-none">+</button>
+				</div>
 			</div>
-			<button id="saveAndRefreshSpeedVideo" class="p-2 rounded border border-blue-100 w-fit hover:bg-gray-100 active:bg-gray-400 transition-all">Sauvegarder et rafraichir</button>
-			<p>Après avoir sauvegardé, rafraichir la page.</p>
+
+			<button id="saveAndRefreshSpeedVideo" class="p-2 rounded border w-fit hover:bg-[#3C6E71] active:bg-[#D9D9D9] transition-all outline-none focus:ring-2 border-white focus:ring-[#FFFFFF] outline-offset-2">Sauvegarder et actualiser</button>
+			<p>Après avoir sauvegardé, actualiser la page.</p>
+
 			<div class="flex gap-x-2">
-				<button id="saveSpeedVideo" class="p-2 rounded border border-blue-100 w-fit hover:bg-gray-100 active:bg-gray-400 transition-all">Sauvegarder</button>
-				<button id="refreshPage" class="p-2 rounded border border-blue-100 w-fit hover:bg-gray-100 active:bg-gray-400 transition-all">Rafraichir</button>
+				<button id="saveSpeedVideo" class="border-white p-2 rounded border w-fit hover:bg-[#3C6E71] active:bg-[#D9D9D9] transition-all outline-none focus:ring-2 focus:ring-[#FFFFFF] outline-offset-2">Sauvegarder</button>
+				<button id="refreshPage" class="border-white p-2 rounded border w-fit hover:bg-[#3C6E71] active:bg-[#D9D9D9] transition-all outline-none focus:ring-2 focus:ring-[#FFFFFF] outline-offset-2">Actualiser</button>
 			</div>
+
+			<p>Fonctionne sur Netflix, Disney+, Prime, Youtube, et tous les sites contenant des vidéos.</p>
 		</section>
 		<script src="options.js"></script>
 	</body>

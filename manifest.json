@@ -3,7 +3,7 @@
 	"name": "Video Speed",
 	"version": "1.0",
 	"description": "Automatically adjusts video playback speed on any websites.",
-	"permissions": ["activeTab", "storage", "scripting"],
+	"permissions": ["activeTab", "storage"],
 	"action": {
 		"default_popup": "popup/options.html"
 	},
